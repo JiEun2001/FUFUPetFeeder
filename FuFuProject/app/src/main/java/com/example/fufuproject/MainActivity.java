@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText Name;
     private EditText Password;
-    private TextView Attempt;
+    private TextView Attempt, Register;
     private Button Login;
     private int counter=5;
 
@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.editTextPassword);
         Attempt = (TextView) findViewById(R.id.textViewAttempt);
         Login = (Button) findViewById(R.id.ButtonLogin);
+        Register = (TextView) findViewById(R.id.tvRegister);
+
 
         Attempt.setText("No. of attempt remaining: 5");
 
@@ -35,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
                 validate(Name.getText().toString(), Password.getText().toString());
             }
         });
+        Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
+            }
+        });
+
+
 
 
     }
