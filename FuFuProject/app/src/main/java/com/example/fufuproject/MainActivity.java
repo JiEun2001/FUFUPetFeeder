@@ -9,13 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText Name;
     private EditText Password;
-    private TextView Attempt, Register;
+    private TextView Attempt;
     private Button Login;
     private int counter=5;
+    private TextView userRegistration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Password = (EditText) findViewById(R.id.editTextPassword);
         Attempt = (TextView) findViewById(R.id.textViewAttempt);
         Login = (Button) findViewById(R.id.ButtonLogin);
-        Register = (TextView) findViewById(R.id.tvRegister);
+        userRegistration = (TextView) findViewById(R.id.tvRegister);
 
 
         Attempt.setText("No. of attempt remaining: 5");
@@ -37,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 validate(Name.getText().toString(), Password.getText().toString());
             }
         });
-        Register.setOnClickListener(new View.OnClickListener() {
+
+
+        userRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, RegistrationActivity.class));

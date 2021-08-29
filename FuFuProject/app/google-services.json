@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "596955220888",
+    "project_id": "fufusdproject",
+    "storage_bucket": "fufusdproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:596955220888:android:52e269aff3135bf247f9ed",
+        "android_client_info": {
+          "package_name": "com.example.fufuproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "596955220888-66r12ikfail4djjk0g5mu7snri8s4alr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc0dSq4Gs5HFD-lmGVekau4y9hZicT2co"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "596955220888-66r12ikfail4djjk0g5mu7snri8s4alr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
