@@ -4,15 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_signup"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="257dp"
         android:layout_height="51dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_login"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -24,26 +29,31 @@
         android:id="@+id/editTextPassword"
         android:layout_width="257dp"
         android:layout_height="51dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_password"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textColor="#040303"
+        android:textColorHint="#020101"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextName"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <Button
         android:id="@+id/ButtonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#d67e49"
         android:text="Sign In"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-        app:layout_constraintVertical_bias="0.29" />
+        app:layout_constraintVertical_bias="0.182" />
 
     <TextView
         android:id="@+id/textViewAttempt"
@@ -53,33 +63,35 @@
         android:textColor="@color/design_default_color_error"
         app:layout_constraintBottom_toTopOf="@+id/ButtonLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-        app:layout_constraintVertical_bias="0.258" />
+        app:layout_constraintVertical_bias="0.473" />
 
     <TextView
         android:id="@+id/tvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New User? SIgn up"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ButtonLogin"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintVertical_bias="0.222" />
 
     <TextView
         android:id="@+id/tvForgorPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/tvRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ButtonLogin"
-        app:layout_constraintVertical_bias="0.422" />
+        app:layout_constraintVertical_bias="0.531" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
