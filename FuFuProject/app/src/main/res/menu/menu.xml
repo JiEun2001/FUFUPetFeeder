@@ -2,27 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
     <item
-        android:id="@+id/LogoutMenu"
+        android:id="@+id/profilemenu"
         android:orderInCategory="100"
         app:showAsAction="never"
-        android:title="Logout"
+        android:title="User Profile"
         >
     </item>
 
     <item
-        android:id="@+id/SettingsMenu"
+        android:id="@+id/logoutmenu"
         android:orderInCategory="200"
         app:showAsAction="never"
-        android:title="Settings"
-        >
-    </item>
-
-    <item
-        android:id="@+id/RefreshMenu"
-        android:orderInCategory="300"
-        app:showAsAction="never"
-        android:title="Refresh"
+        android:title="Logout"
         >
     </item>
 

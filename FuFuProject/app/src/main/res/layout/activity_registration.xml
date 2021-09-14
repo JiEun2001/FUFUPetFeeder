@@ -54,8 +54,8 @@
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_password"
         android:ellipsize="start"
-        android:gravity="center_horizontal"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Password"
         android:inputType="textPersonName"
         android:password="true"
@@ -66,7 +66,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUsername"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.082" />
 
     <TextView
         android:id="@+id/tvUserLogin"
@@ -94,6 +94,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.153" />
+        app:layout_constraintVertical_bias="0.302" />
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/regButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.333" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

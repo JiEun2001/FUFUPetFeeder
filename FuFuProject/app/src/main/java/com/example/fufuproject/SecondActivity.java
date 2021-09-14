@@ -29,9 +29,6 @@ public class SecondActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();
-                finish();
-                startActivity(new Intent(SecondActivity.this,MainActivity.class));
                 logout ();
             }
         });
@@ -51,12 +48,14 @@ public class SecondActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-
         switch (item.getItemId()){
-            case R.id.LogoutMenu:{
-                logout ();
-
+            case R.id.logoutmenu:{
+                logout();
+                break;
+            }
+            case R.id.profilemenu:{
+                startActivity(new Intent(SecondActivity.this, ProfileActivity.class));
+                break;
             }
         }
         return super.onOptionsItemSelected(item);

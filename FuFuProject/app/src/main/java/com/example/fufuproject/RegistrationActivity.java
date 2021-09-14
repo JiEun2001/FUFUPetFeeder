@@ -16,13 +16,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private EditText userName, userPassword, userEmail;
+    private EditText userName, userPassword, userEmail, userAge;
     private Button regButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
+    String email,name,age,password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +49,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
                             if(task.isSuccessful()){
                                 sendEmailVerification();
-                                //Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                //startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+
                             }else{
                                 Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
 
@@ -74,15 +76,18 @@ public class RegistrationActivity extends AppCompatActivity {
         userEmail = (EditText) findViewById(R.id.etEmail);
         regButton = (Button) findViewById(R.id.regButton);
         userLogin = (TextView) findViewById(R.id.tvUserLogin);
+        userAge =  (EditText) findViewById((R.id.etAge));
     }
     private Boolean validate(){
         boolean result = false;
 
-        String name = userName.getText().toString();
-        String password =userPassword.getText().toString();
-        String email = userEmail.getText().toString();
+        name = userName.getText().toString();
+        password =userPassword.getText().toString();
+        email = userEmail.getText().toString();
+        age = userAge.getText().toString();
 
-        if(name.isEmpty() || password.isEmpty() || email.isEmpty()){
+
+        if(name.isEmpty() || password.isEmpty() || email.isEmpty() || age.isEmpty()){
             Toast.makeText(this,"Please enter all the details", Toast.LENGTH_SHORT).show();
         }else{
             result = true;
@@ -96,7 +101,8 @@ public class RegistrationActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(RegistrationActivity.this, "Succesfully registered, please check your email", Toast.LENGTH_SHORT).show();
+                        sendUserData();
+                        Toast.makeText(RegistrationActivity.this, "Succesfully registered, please check your email ", Toast.LENGTH_SHORT).show();
                         firebaseAuth.signOut();
                         finish();
                         startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
@@ -106,5 +112,13 @@ public class RegistrationActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private void sendUserData(){
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
+        UserProfile userProfile = new UserProfile(age, email, name);
+        myRef.setValue(userProfile);
+
     }
 }
