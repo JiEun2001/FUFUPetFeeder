@@ -63,7 +63,13 @@ public class MainActivity extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validate(Name.getText().toString(), Password.getText().toString());
+
+                if (!Name.getText().toString().isEmpty() && !Password.getText().toString().isEmpty()) {
+                    validate(Name.getText().toString(), Password.getText().toString());
+                }else{
+                    Toast.makeText(MainActivity.this, "Please insert Email and password", Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
 
@@ -87,46 +93,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void validate(String UserName, String UserPassword) {
-        progressDialog.setMessage("Mak ko ijo");
-        progressDialog.show();
 
-        firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    progressDialog.dismiss();
-                    //Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    CheckEmailVerification();
-                    //startActivity(new Intent(MainActivity.this, SecondActivity.class));
+            progressDialog.setMessage("Mak ko ijo");
+            progressDialog.show();
 
-                }else{
-                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                    counter--;
-                    Attempt.setText("No of attempts remaining: " + counter);
-                    progressDialog.dismiss();
-                    if (counter == 0){
-                        Login.setEnabled(false);
+            firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()){
+                        progressDialog.dismiss();
+                        //Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        CheckEmailVerification();
+                        //startActivity(new Intent(MainActivity.this, SecondActivity.class));
+
+                    }else{
+                        Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                        counter--;
+                        Attempt.setText("No of attempts remaining: " + counter);
+                        progressDialog.dismiss();
+                        if (counter == 0){
+                            Login.setEnabled(false);
+                        }
+                    }
+
+                }
+                private void CheckEmailVerification(){
+                    FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
+                    boolean emailflag = firebaseUser.isEmailVerified();
+
+                    if(emailflag){
+                        finish();
+                        startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                    }else{
+                        Toast.makeText(MainActivity.this, "Please verify your email", Toast.LENGTH_SHORT).show();
+                        firebaseAuth.signOut();
                     }
                 }
 
-            }
-            private void CheckEmailVerification(){
-                FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
-                boolean emailflag = firebaseUser.isEmailVerified();
+            });
+        }
 
-                if(emailflag){
-                    finish();
-                    startActivity(new Intent(MainActivity.this, SecondActivity.class));
-                }else{
-                    Toast.makeText(MainActivity.this, "Please verify your email", Toast.LENGTH_SHORT);
-                    firebaseAuth.signOut();
-                }
-            }
-
-        });
 
 
 
     }
 
-}

@@ -77,7 +77,6 @@ public class RegistrationActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                //ActivityResultContracts.StartActivityForResult(Intent.createChooser(intent, "Image"), PICK_IMAGE);
                 startActivityForResult(Intent.createChooser(intent, "Select Image"), PICK_IMAGE);
             }
         });
