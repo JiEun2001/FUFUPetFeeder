@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_bg"
+    android:visibility="visible"
     tools:context=".RegistrationActivity">
 
     <EditText
@@ -14,8 +15,8 @@
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_email"
         android:ellipsize="start"
-        android:gravity="center_horizontal"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="e-mail"
         android:inputType="textPersonName"
         android:textColor="#000000"
@@ -114,5 +115,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:layout_constraintVertical_bias="0.464" />
+
+    <ImageView
+        android:id="@+id/userProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="575dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
