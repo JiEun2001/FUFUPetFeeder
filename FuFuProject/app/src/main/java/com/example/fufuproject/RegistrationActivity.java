@@ -77,7 +77,8 @@ public class RegistrationActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                ActivityResultContracts.StartActivityForResult(Intent.createChooser(intent, "Image"), PICK_IMAGE);
+                //ActivityResultContracts.StartActivityForResult(Intent.createChooser(intent, "Image"), PICK_IMAGE);
+                startActivityForResult(Intent.createChooser(intent, "Select Image"), PICK_IMAGE);
             }
         });
 
@@ -125,6 +126,7 @@ public class RegistrationActivity extends AppCompatActivity {
         regButton = (Button) findViewById(R.id.regButton);
         userLogin = (TextView) findViewById(R.id.tvUserLogin);
         userAge =  (EditText) findViewById((R.id.etAge));
+        userProfilePic = (ImageView) findViewById(R.id.userProfilePic);
     }
     private Boolean validate(){
         boolean result = false;
@@ -165,7 +167,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private void sendUserData(){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
-        StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").("Profile Pick");
+        StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
         UploadTask uploadTask = imageReference.putFile(imagePath);
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override

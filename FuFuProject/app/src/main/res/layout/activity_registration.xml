@@ -118,11 +118,16 @@
 
     <ImageView
         android:id="@+id/userProfilePic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="575dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="127dp"
+        android:layout_height="110dp"
+        android:background="#FBFBFB"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.893"
+        app:srcCompat="@drawable/ic_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

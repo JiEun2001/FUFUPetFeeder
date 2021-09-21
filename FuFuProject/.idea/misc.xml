@@ -15,9 +15,11 @@
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_update_profile.xml" value="0.22" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_profile.xml" value="0.176" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_registration.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_second.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_update_profile.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/muhda/Desktop/Assignments/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/muhda/Desktop/Assignments/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_second.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
@@ -32,7 +34,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
