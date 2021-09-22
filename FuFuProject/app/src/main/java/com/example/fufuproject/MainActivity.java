@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void validate(String UserName, String UserPassword) {
 
-            progressDialog.setMessage("Mak ko ijo");
+            progressDialog.setMessage("Processing Please Wait");
             progressDialog.show();
 
             firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

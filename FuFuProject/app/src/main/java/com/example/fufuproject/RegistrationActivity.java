@@ -137,7 +137,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
 
         if(name.isEmpty() || password.isEmpty() || email.isEmpty() || age.isEmpty() || imagePath == null){
-            Toast.makeText(this,"Please enter all the details", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Please enter all the details and image", Toast.LENGTH_SHORT).show();
         }else{
             result = true;
         }

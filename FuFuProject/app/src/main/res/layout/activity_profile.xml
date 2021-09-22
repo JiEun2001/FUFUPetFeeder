@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tvProfileName"
-        android:layout_width="74dp"
+        android:layout_width="259dp"
         android:layout_height="20dp"
         android:background="@drawable/text_border"
         android:drawableStart="@drawable/ic_login"
@@ -36,8 +36,8 @@
 
     <TextView
         android:id="@+id/tvProfileEmail"
-        android:layout_width="74dp"
-        android:layout_height="20dp"
+        android:layout_width="254dp"
+        android:layout_height="23dp"
         android:background="@drawable/text_border"
         android:drawableStart="@drawable/ic_email"
         android:text="  Email:"
@@ -50,8 +50,8 @@
 
     <TextView
         android:id="@+id/tvProfileAge"
-        android:layout_width="74dp"
-        android:layout_height="21dp"
+        android:layout_width="251dp"
+        android:layout_height="23dp"
         android:background="@drawable/text_border"
         android:drawableStart="@drawable/ic_age"
         android:text="  Age"
