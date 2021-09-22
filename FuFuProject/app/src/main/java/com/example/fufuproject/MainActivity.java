@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide();
+
         Name = (EditText) findViewById(R.id.editTextName);
         Password = (EditText) findViewById(R.id.editTextPassword);
         Attempt = (TextView) findViewById(R.id.textViewAttempt);

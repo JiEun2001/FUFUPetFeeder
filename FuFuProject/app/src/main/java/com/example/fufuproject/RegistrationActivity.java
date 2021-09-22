@@ -65,6 +65,7 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         setupUIviews();
+        getSupportActionBar().setTitle("");
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
@@ -86,25 +87,33 @@ public class RegistrationActivity extends AppCompatActivity {
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(validate()){
-                    //upload data to firebase
-                    String user_email = userEmail.getText().toString().trim();
-                    String user_password = userPassword.getText().toString().trim();
+                if(userPassword.getText().toString().trim().length() >= 8) {
 
-                    firebaseAuth.createUserWithEmailAndPassword(user_email,user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
 
-                            if(task.isSuccessful()){
-                                sendEmailVerification();
+                    if (validate()) {
+                        //upload data to firebase
+                        String user_email = userEmail.getText().toString().trim();
+                        String user_password = userPassword.getText().toString().trim();
 
-                            }else{
-                                Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                        firebaseAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
 
+                                if (task.isSuccessful()) {
+                                    sendEmailVerification();
+
+                                } else {
+                                    Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+                }else {
+                    Toast.makeText(RegistrationActivity.this, "Password must be 8 or above.", Toast.LENGTH_SHORT).show();
+
                 }
+
 
             }
         });

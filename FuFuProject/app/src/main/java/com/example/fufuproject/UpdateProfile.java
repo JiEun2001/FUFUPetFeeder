@@ -62,6 +62,7 @@ public class UpdateProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_profile);
+        getSupportActionBar().setTitle("");
 
         newUserName = findViewById(R.id.etNameUpdate);
         newUserEmail = findViewById(R.id.etEmailUpdate);

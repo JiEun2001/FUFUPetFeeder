@@ -24,6 +24,7 @@ public class UpdatePassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_password);
+        getSupportActionBar().setTitle("");
 
         update = findViewById(R.id.btnUpdatePassword);
         newPassword = findViewById(R.id.etNewPassword);
@@ -37,19 +38,28 @@ public class UpdatePassword extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(!newPassword.getText().toString().isEmpty()){
-                    String userPasswordNew = newPassword.getText().toString();
-                    firebaseUser.updatePassword(userPasswordNew).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful()){
-                                Toast.makeText(UpdatePassword.this, "Password Changed", Toast.LENGTH_SHORT).show();
-                                finish();
-                            }else {
-                                Toast.makeText(UpdatePassword.this, "Password Changed Failed", Toast.LENGTH_SHORT).show();
+                    if(newPassword.getText().toString().length() >= 8) {
 
+
+                        String userPasswordNew = newPassword.getText().toString();
+                        firebaseUser.updatePassword(userPasswordNew).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(UpdatePassword.this, "Password Changed", Toast.LENGTH_SHORT).show();
+                                    finish();
+                                } else {
+                                    Toast.makeText(UpdatePassword.this, "Password Changed Failed", Toast.LENGTH_SHORT).show();
+
+                                }
                             }
-                        }
-                    });
+                        });
+                    }else {
+                        Toast.makeText(UpdatePassword.this, "Password must be 8 or above", Toast.LENGTH_SHORT).show();
+
+                    }
+
+
                 }else{
                     Toast.makeText(UpdatePassword.this, "Please insert new password", Toast.LENGTH_SHORT).show();
 
