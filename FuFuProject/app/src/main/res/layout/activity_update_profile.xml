@@ -19,31 +19,31 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etAgeUpdate"
-        app:layout_constraintVertical_bias="0.334" />
+        app:layout_constraintVertical_bias="0.33" />
 
     <ImageView
         android:id="@+id/ivProfilePicUpdate"
-        android:layout_width="144dp"
-        android:layout_height="140dp"
-        android:background="@drawable/text_border"
+        android:layout_width="135dp"
+        android:layout_height="124dp"
+        android:background="@drawable/image_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206"
-        app:srcCompat="@drawable/ic_login" />
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/add" />
 
     <EditText
         android:id="@+id/etNameUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="339dp"
+        android:layout_height="30dp"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_login"
         android:ellipsize="start"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
-        android:hint="Username"
+        android:hint="Please enter your new username"
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -56,14 +56,15 @@
 
     <EditText
         android:id="@+id/etEmailUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="337dp"
+        android:layout_height="29dp"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_email"
         android:ellipsize="start"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
-        android:hint="E-mail"
+        android:hint="Please enter your new E-mail"
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -76,22 +77,23 @@
 
     <EditText
         android:id="@+id/etAgeUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="336dp"
+        android:layout_height="30dp"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_age"
         android:ellipsize="start"
         android:ems="10"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
-        android:hint="Age"
+        android:hint="Please enter your new age"
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmailUpdate"
-        app:layout_constraintVertical_bias="0.135" />
+        app:layout_constraintVertical_bias="0.143" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
