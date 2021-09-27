@@ -46,6 +46,8 @@ public class ProfileActivity extends AppCompatActivity {
         changePassword = findViewById(R.id.btnChangePassword);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
+
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
