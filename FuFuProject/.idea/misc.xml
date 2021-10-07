@@ -16,6 +16,9 @@
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_update_password.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_update_profile.xml" value="0.22" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_homepage.xml" value="0.264" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_log_in.xml" value="0.264" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_reg.xml" value="0.1390625" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_password.xml" value="0.4" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_profile.xml" value="0.176" />
@@ -42,7 +45,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

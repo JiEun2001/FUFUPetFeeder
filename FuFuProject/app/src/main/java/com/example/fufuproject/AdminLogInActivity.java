@@ -55,7 +55,7 @@ public class AdminLogInActivity extends AppCompatActivity {
 
         if(user !=null) {
             finish();
-            startActivity(new Intent(MainActivity.this, SecondActivity.class));
+            startActivity(new Intent(AdminLogInActivity.this, SecondActivity.class));
         }
 
         Login.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +65,7 @@ public class AdminLogInActivity extends AppCompatActivity {
                 if (!Name.getText().toString().isEmpty() && !Password.getText().toString().isEmpty()) {
                     validate(Name.getText().toString(), Password.getText().toString());
                 }else{
-                    Toast.makeText(MainActivity.this, "Please insert Email and password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminLogInActivity.this, "Please insert Email and password", Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -76,14 +76,14 @@ public class AdminLogInActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
+                startActivity(new Intent(AdminLogInActivity.this, RegistrationActivity.class));
             }
         });
 
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this , PasswordActivity.class));
+                startActivity(new Intent(AdminLogInActivity.this , PasswordActivity.class));
             }
         });
 
@@ -105,7 +105,7 @@ public class AdminLogInActivity extends AppCompatActivity {
                     //startActivity(new Intent(MainActivity.this, SecondActivity.class));
 
                 }else{
-                    Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminLogInActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                     counter--;
                     Attempt.setText("No of attempts remaining: " + counter);
                     progressDialog.dismiss();
@@ -121,9 +121,9 @@ public class AdminLogInActivity extends AppCompatActivity {
 
                 if(emailflag){
                     finish();
-                    startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                    startActivity(new Intent(AdminLogInActivity.this, SecondActivity.class));
                 }else{
-                    Toast.makeText(MainActivity.this, "Please verify your email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AdminLogInActivity.this, "Please verify your email", Toast.LENGTH_SHORT).show();
                     firebaseAuth.signOut();
                 }
             }

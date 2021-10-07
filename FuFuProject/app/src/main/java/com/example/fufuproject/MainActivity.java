@@ -58,8 +58,14 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         if(user !=null) {
-            finish();
-            startActivity(new Intent(MainActivity.this, SecondActivity.class));
+            //admin
+            if((user.getEmail()).equals("farhanazmi012@gmail.com")){
+                finish();
+                startActivity(new Intent(MainActivity.this, AdminHomepage.class));
+            }else{
+                finish();
+                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+            }
         }
 
         Login.setOnClickListener(new View.OnClickListener() {
@@ -99,44 +105,66 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.setMessage("Processing Please Wait");
             progressDialog.show();
 
-            firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()){
-                        progressDialog.dismiss();
-                        //Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        CheckEmailVerification();
-                        //startActivity(new Intent(MainActivity.this, SecondActivity.class));
-
-                    }else{
-                        Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                        counter--;
-                        Attempt.setText("No of attempts remaining: " + counter);
-                        progressDialog.dismiss();
-                        if (counter == 0){
-                            Login.setEnabled(false);
+            if(UserName.equals("farhanazmi012@gmail.com")){
+                //if login is admin
+                firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            progressDialog.setMessage("Please wait for a moment....");
+                            progressDialog.show();
+                            CheckEmailVerification();
+                            Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                            finish();
+                            startActivity(new Intent(MainActivity.this,AdminHomepage.class));
+                        }else{
+                            Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                            counter--;
+                            Attempt.setText("No of attempts remaining: " + counter);
+                            progressDialog.dismiss();
+                            if (counter == 0){
+                                Login.setEnabled(false);
+                            }
                         }
                     }
+                });
+            }else{
+                //if login not admin
+                firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            progressDialog.dismiss();
+                            CheckEmailVerification();
+                            startActivity(new Intent(MainActivity.this,SecondActivity.class));
 
-                }
-                private void CheckEmailVerification(){
-                    FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
-                    boolean emailflag = firebaseUser.isEmailVerified();
+                        }else{
+                            Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                            counter--;
+                            Attempt.setText("No of attempts remaining: " + counter);
+                            progressDialog.dismiss();
+                            if (counter == 0){
+                                Login.setEnabled(false);
+                            }
+                        }
 
-                    if(emailflag){
-                        finish();
-                        startActivity(new Intent(MainActivity.this, SecondActivity.class));
-                    }else{
-                        Toast.makeText(MainActivity.this, "Please verify your email", Toast.LENGTH_SHORT).show();
-                        firebaseAuth.signOut();
                     }
-                }
+                });
+            }
 
-            });
+
         }
+    private void CheckEmailVerification(){
+        FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
+        boolean emailflag = firebaseUser.isEmailVerified();
 
-
-
-
+        if(emailflag){
+            finish();
+            //startActivity(new Intent(MainActivity.this, SecondActivity.class));
+        }else{
+            Toast.makeText(MainActivity.this, "Please verify your email", Toast.LENGTH_SHORT).show();
+            firebaseAuth.signOut();
+        }
     }
+}
 
