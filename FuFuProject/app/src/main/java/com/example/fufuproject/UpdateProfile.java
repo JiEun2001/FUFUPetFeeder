@@ -78,7 +78,7 @@ public class UpdateProfile extends AppCompatActivity {
 
 
 
-        final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+        final DatabaseReference databaseReference = firebaseDatabase.getReference("users/"+firebaseAuth.getUid());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -113,7 +113,7 @@ public class UpdateProfile extends AppCompatActivity {
                 databaseReference.setValue(userProfile);
                 if (imagePath != null)
                 {
-                    StorageReference imageReference = storageReference.child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
+                    StorageReference imageReference = storageReference.child("users").child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
                     UploadTask uploadTask = imageReference.putFile(imagePath);
 
                     uploadTask.addOnFailureListener(new OnFailureListener() {
