@@ -78,8 +78,8 @@ void loop() {
     buttonDeviceState = firebaseData.intData();
    
   }
-  Serial.print(Firebase.getInt(firebaseData, path + "/motor"));
-  //Serial.print(buttonState);
+  //Serial.print(Firebase.getInt(firebaseData, path + "/motor"));
+  Serial.println("test");
   
   //StepRevolution for time
   //motor
@@ -87,8 +87,6 @@ void loop() {
     
     myStepper.step(-stepsPerRevolution);
   }
-  
-
   
   //UltraSonicSensor
   NewDistance = distanceSensor.measureDistanceCm();
@@ -98,9 +96,6 @@ void loop() {
     OldDistance = NewDistance; 
     
   }
-  
-  
-
  delay(1000);
   
   // Step one revolution in the other direction:
@@ -121,10 +116,38 @@ void initWifi(){
 
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
   Firebase.reconnectWiFi(true);
+  Firebase.setMaxErrorQueue(firebaseData, 10);
+  Firebase.beginAutoRunErrorQueue(firebaseData, errorQueueCallback);
+
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
   //Set database read timeout to 1 minute (max 15 minutes)
   Firebase.setReadTimeout(firebaseData, 1000 * 60);
   //tiny, small, medium, large and unlimited.
   //Size and its write timeout e.g. tiny (1s), small (10s), medium (30s) and large (60s).
   Firebase.setwriteSizeLimit(firebaseData, "tiny");
+}
+
+void errorQueueCallback (QueueInfo queueinfo){
+
+  if (queueinfo.isQueueFull())
+  {
+    Serial.println("Queue is full");
+  }
+
+  Serial.print("Remaining queues: ");
+  Serial.println(queueinfo.totalQueues());
+
+  Serial.print("Being processed queue ID: ");
+  Serial.println(queueinfo.currentQueueID());  
+
+  Serial.print("Data type:");
+  Serial.println(queueinfo.dataType()); 
+
+  Serial.print("Method: ");
+  Serial.println(queueinfo.firebaseMethod());
+
+  Serial.print("Path: ");
+  Serial.println(queueinfo.dataPath());
+
+  Serial.println();
 }
