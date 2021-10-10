@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FuFuProject">
         <activity
+            android:name=".AdminProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminUpdateProfile"
+            android:exported="true" />
+        <activity
+            android:name=".AdminUpdatePassword"
+            android:exported="true" />
+        <activity
             android:name=".AdminHomepage"
             android:exported="true" />
         <activity

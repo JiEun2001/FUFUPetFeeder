@@ -109,7 +109,7 @@ public class AdminHomepage extends AppCompatActivity {
                 break;
             }
             case R.id.profilemenu:{
-                startActivity(new Intent(AdminHomepage.this, ProfileActivity.class));
+                startActivity(new Intent(AdminHomepage.this, AdminProfileActivity.class));
                 break;
             }
         }
