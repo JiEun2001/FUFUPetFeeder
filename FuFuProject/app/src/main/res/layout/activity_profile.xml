@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/right_bg_with_logo"
+    android:background="@drawable/admin_background_2__2_"
     tools:context=".ProfileActivity">
 
     <TextView
