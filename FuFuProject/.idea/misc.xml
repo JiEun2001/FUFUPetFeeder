@@ -35,12 +35,14 @@
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_update_profile.xml" value="0.4" />
         <entry key="..\:/Users/muhda/Desktop/Assignments/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/muhda/Desktop/Assignments/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_second.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_admin_homepage.xml" value="0.1984375" />
         <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_admin_log_in.xml" value="0.26145833333333335" />
         <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_admin_reg.xml" value="0.24739583333333334" />
         <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_registration.xml" value="0.25" />
         <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_second.xml" value="0.16302083333333334" />
         <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_update_profile.xml" value="0.2677083333333333" />
+        <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/menu/menu.xml" value="0.1984375" />
         <entry key="..\:/fufu smart feeder github/FuFuProject/app/src/main/res/layout/activity_admin_homepage.xml" value="0.3145833333333333" />
         <entry key="..\:/fufu smart feeder github/FuFuProject/app/src/main/res/layout/activity_admin_log_in.xml" value="0.30052083333333335" />
         <entry key="..\:/fufu smart feeder github/FuFuProject/app/src/main/res/layout/activity_admin_password.xml" value="0.30052083333333335" />
@@ -59,7 +61,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

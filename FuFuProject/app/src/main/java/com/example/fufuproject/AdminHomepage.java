@@ -112,6 +112,13 @@ public class AdminHomepage extends AppCompatActivity {
                 startActivity(new Intent(AdminHomepage.this, AdminProfileActivity.class));
                 break;
             }
+            case R.id.viewproductadmin:{
+                startActivity(new Intent(AdminHomepage.this, AboutUsAdmin.class));
+            }
+            case R.id.aboutusadmin:{
+                startActivity(new Intent(AdminHomepage.this, AboutUsAdmin.class));
+                break;
+            }
         }
         return super.onOptionsItemSelected(item);
     }

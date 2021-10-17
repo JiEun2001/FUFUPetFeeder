@@ -20,4 +20,22 @@
         >
     </item>
 
+    <item
+        android:id="@+id/aboutusadmin"
+        android:orderInCategory="300"
+        app:showAsAction="never"
+        android:title="About Us"
+        >
+    </item>
+
+    <item
+        android:id="@+id/viewproductadmin"
+        android:orderInCategory="400"
+        app:showAsAction="never"
+        android:title="View Product"
+        >
+    </item>
+
+
+
 </menu>
