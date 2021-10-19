@@ -20,10 +20,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class AdminHomepage extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
-    private Button logout;
+    private Button logout,viewUser,history;
     private TextView Distance;
     private ToggleButton Manual;
 
@@ -41,8 +44,14 @@ public class AdminHomepage extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         logout = (Button)findViewById(R.id.btnLogout);
+        viewUser = (Button)findViewById(R.id.btnViewUser);
         Distance = (TextView)findViewById(R.id.DistanceTV);
         Manual = (ToggleButton)findViewById(R.id.manualBtn);
+        history = (Button)findViewById(R.id.btnHistory);
+
+
+
+
 
         dref = FirebaseDatabase.getInstance().getReference();
         dref.addValueEventListener(new ValueEventListener() {
@@ -80,11 +89,24 @@ public class AdminHomepage extends AppCompatActivity {
             }
         });
 
+        viewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AdminHomepage.this,ViewListUser.class));
+            }
+        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 logout ();
+            }
+        });
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AdminHomepage.this, ViewHistory.class));
             }
         });
     }
@@ -97,7 +119,7 @@ public class AdminHomepage extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.adminmenu, menu);
         return true;
     }
 

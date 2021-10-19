@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FuFuProject">
         <activity
+            android:name=".ViewHistory"
+            android:exported="true" />
+        <activity
+            android:name=".AdminEditUserProfile"
+            android:exported="true" />
+        <activity
+            android:name=".ViewListUser"
+            android:exported="true" />
+        <activity
             android:name=".ViewProductAdmin"
             android:exported="true" />
         <activity

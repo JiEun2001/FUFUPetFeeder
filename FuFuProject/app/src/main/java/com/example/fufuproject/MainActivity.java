@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.icu.text.IDNA;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
@@ -54,17 +58,48 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference dRef = firebaseDatabase.getReference("users/" + firebaseAuth.getUid());
+
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         if(user !=null) {
+
             //admin
             if((user.getEmail()).equals("farhanazmi012@gmail.com")){
                 finish();
                 startActivity(new Intent(MainActivity.this, AdminHomepage.class));
+                //user
             }else{
-                finish();
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                firebaseDatabase.getReference("users/").child(firebaseAuth.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (!task.isSuccessful()) {
+
+
+                        }
+                        else {
+                            if(task.getResult().getValue() == null)
+                            {
+                                user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            Toast.makeText(MainActivity.this, "Account Deleted", Toast.LENGTH_SHORT).show();
+
+                                        }
+                                    }
+                                });
+                            }else{
+                                Log.d("",String.valueOf(task.getResult().getValue()));
+                                startActivity(new Intent(MainActivity.this,SecondActivity.class));
+                            }
+
+                        }
+                    }
+                });
+
             }
         }
 
@@ -105,6 +140,10 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.setMessage("Processing Please Wait");
             progressDialog.show();
 
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference dRef = firebaseDatabase.getReference("users/" + firebaseAuth.getUid());
+
+
             if(UserName.equals("farhanazmi012@gmail.com")){
                 //if login is admin
                 firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -131,12 +170,41 @@ public class MainActivity extends AppCompatActivity {
             }else{
                 //if login not admin
                 firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             progressDialog.dismiss();
                             CheckEmailVerification();
-                            startActivity(new Intent(MainActivity.this,SecondActivity.class));
+                            //
+                            firebaseDatabase.getReference("users/").child(firebaseAuth.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                    if (!task.isSuccessful()) {
+
+
+                                    }
+                                    else {
+                                        if(task.getResult().getValue() == null)
+                                        {
+                                            firebaseAuth.getCurrentUser().delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if (task.isSuccessful()) {
+                                                        Toast.makeText(MainActivity.this, "Account Deleted", Toast.LENGTH_SHORT).show();
+
+                                                    }
+                                                }
+                                            });
+                                        }else{
+                                            Log.d("",String.valueOf(task.getResult().getValue()));
+                                            startActivity(new Intent(MainActivity.this,SecondActivity.class));
+                                        }
+
+                                    }
+                                }
+                            });
+
 
                         }else{
                             Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();

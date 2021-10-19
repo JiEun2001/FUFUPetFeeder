@@ -1,6 +1,7 @@
 #include <WiFi.h>
 #include <HCSR04.h>
 #include <FirebaseESP32.h>
+#include "time.h"
 
 
 #include <LiquidCrystal_I2C.h>
@@ -37,6 +38,24 @@ UltraSonicDistanceSensor distanceSensor(19,18);//initialisation class HCSR04 (tr
 
 long duration;
 int distance;
+
+//time
+const char* ntpServer = "pool.ntp.org";
+const long  gmtOffset_sec = 28800;
+const int   daylightOffset_sec =0;
+
+int second;
+int minute;
+void printLocalTime()
+{
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo)){
+    Serial.println("Failed to obtain time");
+    return;
+  }
+  Serial.println(&timeinfo, "%A, %B %d %Y %H:%M:%S");
+}
+
 void setup() {
   // put your setup code here, to run once:
 
@@ -64,14 +83,30 @@ void setup() {
 
   initWifi();
   OldDistance = distanceSensor.measureDistanceCm();
+  //
+
+  
+  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+  printLocalTime();
+  
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  // Step one revolution in one direction:
-  //pinSerial.println("clockwise");
-  //myStepper.step(-stepsPerRevolution);
+  
+  struct tm timeinfo;
+  if(!getLocalTime(&timeinfo)){
+    Serial.println("Failed to obtain time");
+    return;
+  }
+  if(second != timeinfo.tm_sec){
+  second = timeinfo.tm_sec;
+  printLocalTime();
+  time_t now;
+  time(&now);
+  Serial.println(now);
+  
+
   buttonState = digitalRead(buttonPin);
   
   if(Firebase.getInt(firebaseData, path + "/motor")){
@@ -92,11 +127,28 @@ void loop() {
   NewDistance = distanceSensor.measureDistanceCm();
   //Serial.println(NewDistance);
   if(NewDistance != OldDistance){
-    Firebase.setInt(firebaseData, path + "/distance", NewDistance);
+    Firebase.setIntAsync(firebaseData, path + "/distance", NewDistance);
     OldDistance = NewDistance; 
     
   }
- delay(1000);
+
+  if(minute != timeinfo.tm_min){
+    minute = timeinfo.tm_min;
+    Firebase.setStringAsync(firebaseData, path + "/History" + "/" + now + "/historydistance", String(NewDistance));
+  }
+ }
+
+ 
+  
+  // put your main code here, to run repeatedly:
+  // Step one revolution in one direction:
+  //pinSerial.println("clockwise");
+  //myStepper.step(-stepsPerRevolution);
+  
+
+  
+ 
+ 
   
   // Step one revolution in the other direction:
 }
