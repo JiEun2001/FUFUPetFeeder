@@ -75,6 +75,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
                                 @Override
                                 public void onSuccess(Void unused) {
                                     Toast.makeText(context,"deleted" ,Toast.LENGTH_SHORT).show();
+                                    context.startActivity(new Intent(context,ViewListUser.class));
 
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
