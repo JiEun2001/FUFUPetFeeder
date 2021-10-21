@@ -135,7 +135,7 @@ public class AdminHomepage extends AppCompatActivity {
                 break;
             }
             case R.id.viewproductadmin:{
-                startActivity(new Intent(AdminHomepage.this, AboutUsAdmin.class));
+                startActivity(new Intent(AdminHomepage.this, ViewProductAdmin.class));
             }
             case R.id.aboutusadmin:{
                 startActivity(new Intent(AdminHomepage.this, AboutUsAdmin.class));

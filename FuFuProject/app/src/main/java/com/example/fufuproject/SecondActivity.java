@@ -59,6 +59,14 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(new Intent(SecondActivity.this, ProfileActivity.class));
                 break;
             }
+            case R.id.aboutus:{
+                startActivity(new Intent(SecondActivity.this, AboutUs.class));
+                break;
+            }
+            case R.id.viewproduct:{
+                startActivity(new Intent(SecondActivity.this, ViewProductAdmin.class));
+                break;
+            }
         }
         return super.onOptionsItemSelected(item);
     }
