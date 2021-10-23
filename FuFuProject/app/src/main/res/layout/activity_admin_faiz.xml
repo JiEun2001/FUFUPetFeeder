@@ -4,15 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/left_bg_with_logo"
-    tools:context=".AdminJason">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="240dp"
-        android:layout_height="241dp"
-        app:srcCompat="@drawable/jason"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="93dp" />
+    tools:context=".AdminFaiz">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
