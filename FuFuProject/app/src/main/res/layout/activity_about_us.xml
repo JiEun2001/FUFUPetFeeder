@@ -54,6 +54,7 @@
         android:id="@+id/ivjason"
         android:layout_width="103dp"
         android:layout_height="105dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ivfarhan"
         app:layout_constraintHorizontal_bias="0.313"
@@ -66,41 +67,45 @@
         android:id="@+id/ivfarhan"
         android:layout_width="103dp"
         android:layout_height="105dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="0.109"
-        app:srcCompat="@drawable/custom_input" />
+        app:srcCompat="@drawable/paan" />
 
     <ImageView
         android:id="@+id/ivdina"
         android:layout_width="103dp"
         android:layout_height="105dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="0.642"
-        app:srcCompat="@drawable/custom_input" />
+        app:srcCompat="@drawable/dina" />
 
     <ImageView
         android:id="@+id/ivhasya"
         android:layout_width="103dp"
         android:layout_height="105dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.297"
         app:layout_constraintStart_toEndOf="@+id/ivdina"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="0.638"
-        app:srcCompat="@drawable/custom_input" />
+        app:srcCompat="@drawable/hasya" />
 
     <ImageView
         android:id="@+id/ivfaiz"
         android:layout_width="103dp"
         android:layout_height="105dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.686"
@@ -135,15 +140,15 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="80dp"
-        android:layout_height="39dp"
+        android:layout_width="71dp"
+        android:layout_height="23dp"
         android:layout_marginTop="8dp"
         android:text="Hasya"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/ivhasya"
-        tools:layout_editor_absoluteX="236dp" />
+        tools:layout_editor_absoluteX="242dp" />
 
     <TextView
         android:id="@+id/textView10"
