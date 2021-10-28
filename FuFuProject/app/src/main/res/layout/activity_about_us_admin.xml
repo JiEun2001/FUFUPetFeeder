@@ -123,8 +123,12 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivjason"
-        tools:layout_editor_absoluteX="32dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView12"
@@ -135,32 +139,42 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivdina"
-        tools:layout_editor_absoluteX="90dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="71dp"
         android:layout_height="23dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="132dp"
         android:text="Hasya"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivhasya"
-        tools:layout_editor_absoluteX="242dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="96dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="72dp"
         android:text="Farhan"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/ivfarhan"
-        tools:layout_editor_absoluteX="157dp" />
+        app:layout_constraintVertical_bias="0.004" />
 
     <TextView
         android:id="@+id/textView11"
@@ -171,7 +185,9 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivfaiz"
-        tools:layout_editor_absoluteX="306dp" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="353dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
