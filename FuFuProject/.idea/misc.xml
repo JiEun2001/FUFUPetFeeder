@@ -3,14 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/drawable/circle_button.xml" value="0.1" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/drawable/custom_input.xml" value="0.1" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/drawable/ic_login.xml" value="0.1" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/drawable/image_border.xml" value="0.1" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/drawable/oval_button.xml" value="0.125" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/drawable/text_border.xml" value="0.1" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_dina.xml" value="0.22" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_edit_user_profile.xml" value="0.16666666666666666" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_faiz.xml" value="0.11367753623188406" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_homepage.xml" value="0.22" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_log_in.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_password.xml" value="0.1403985507246377" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_profile.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_profile2.xml" value="0.1403985507246377" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_reg.xml" value="0.11367753623188406" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_update_password.xml" value="0.1403985507246377" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_update_profile.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.22" />
@@ -21,6 +28,8 @@
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.14666666666666667" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_update_password.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_update_profile.xml" value="0.22" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/historyitem.xml" value="0.11367753623188406" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/item.xml" value="0.11367753623188406" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/drawable/ic_delete.xml" value="0.2703125" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_about_us.xml" value="0.264" />
