@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminDina"android:background="@drawable/right_bg_with_logo">
+    tools:context=".AdminDina"
+    android:background="@drawable/right_bg_with_logo">
 
     <ImageView
         android:id="@+id/imageView"

@@ -165,7 +165,7 @@
         android:layout_width="96dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="48dp"
         android:text="Farhan"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -185,8 +185,10 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivfaiz"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="308dp" />
+        app:layout_constraintVertical_bias="0.014" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
