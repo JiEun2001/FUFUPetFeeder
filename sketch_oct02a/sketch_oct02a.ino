@@ -139,13 +139,10 @@ void loop() {
   }
 
   // set auto 
-  String autoTime;
-  Firebase.getJSON(firebaseData, "/autoFeed");
-  JsonObject object = firebaseData.jsonObject();
-  Serial.println(object.size());
-
   
+/////
   String time24hour;
+    
     
     if (timeinfo.tm_hour > 12){
       time12hour = timeinfo.tm_hour- 12;
@@ -160,10 +157,12 @@ void loop() {
     // hh:mm
     String timein12hour = String(time12hour) + ":" + String(timeinfo.tm_min) +" " + timeampm;
 
-    if (timein12hour == autoTime){
-      
+
+    if(time12hour == Firebase.getString(firebaseData,"/Masa/time1")){
+      buttonDeviceState = HIGH;
+      delay(30000);
+      buttonDeviceState = LOW;
     }
-  
  }
 
  
