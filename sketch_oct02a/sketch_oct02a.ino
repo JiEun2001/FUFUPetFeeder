@@ -2,7 +2,7 @@
 #include <HCSR04.h>
 #include <FirebaseESP32.h>
 #include "time.h"
-#include <ArduinoJson>
+#include <ArduinoJson.h>
 
 
 #include <LiquidCrystal_I2C.h>
@@ -140,14 +140,11 @@ void loop() {
 
   // set auto 
   String autoTime;
-  Firebase.getJSON(firebaseData, "/autoFeed", autoTime);
-
-  JsonObject object = autoTime;
+  Firebase.getJSON(firebaseData, "/autoFeed");
+  JsonObject object = firebaseData.jsonObject();
   Serial.println(object.size());
 
-  while(autoTime.object > auto){
-    
-  }
+  
   String time24hour;
     
     if (timeinfo.tm_hour > 12){
