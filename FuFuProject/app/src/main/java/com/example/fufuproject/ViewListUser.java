@@ -43,7 +43,8 @@ public class ViewListUser extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 list.clear();
-                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()  ){
+
                     UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
                     userProfile.setKey(dataSnapshot.getKey());
                     list.add(userProfile);

@@ -193,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
                                                     if (task.isSuccessful()) {
                                                         Toast.makeText(MainActivity.this, "Account Deleted", Toast.LENGTH_SHORT).show();
 
+
                                                     }
                                                 }
                                             });

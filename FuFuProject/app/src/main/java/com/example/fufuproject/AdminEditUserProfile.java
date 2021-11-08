@@ -41,13 +41,23 @@ public class AdminEditUserProfile extends AppCompatActivity {
         dRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
 
+                if (userProfile == null) {
 
+                }else{
                     AdminUserName.setText(userProfile.getUserName());
                     Log.d("",userProfile.getUserName());
                     AdminUserAge.setText(userProfile.getUserAge());
                     AdminUserEmail.setText(userProfile.getUserEmail());
+                }
+
+
+
+
+
+
 
             }
             @Override

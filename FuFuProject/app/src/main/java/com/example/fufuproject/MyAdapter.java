@@ -1,5 +1,6 @@
 package com.example.fufuproject;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -76,6 +77,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
                                 public void onSuccess(Void unused) {
                                     Toast.makeText(context,"deleted" ,Toast.LENGTH_SHORT).show();
                                     context.startActivity(new Intent(context,ViewListUser.class));
+                                    Log.d("",user.getKey());
+
+                                    ((Activity)view.getContext()).finish();
+
 
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
