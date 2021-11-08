@@ -2,6 +2,7 @@
 #include <HCSR04.h>
 #include <FirebaseESP32.h>
 #include "time.h"
+#include <ArduinoJson>
 
 
 #include <LiquidCrystal_I2C.h>
@@ -136,6 +137,36 @@ void loop() {
     minute = timeinfo.tm_min;
     Firebase.setStringAsync(firebaseData, path + "/History" + "/" + now + "/historydistance", String(NewDistance));
   }
+
+  // set auto 
+  String autoTime;
+  Firebase.getJSON(firebaseData, "/autoFeed", autoTime);
+
+  JsonObject object = autoTime;
+  Serial.println(object.size());
+
+  while(autoTime.object > auto){
+    
+  }
+  String time24hour;
+    
+    if (timeinfo.tm_hour > 12){
+      time12hour = timeinfo.tm_hour- 12;
+      timeampm = "PM";
+      }else if (timeinfo.tm_hour== 0){
+      time12hour = timeinfo.tm_hour+ 12;
+      timeampm = "AM";
+      }else{
+      time12hour = timeinfo.tm_hour;
+      timeampm = "AM";
+    }
+    // hh:mm
+    String timein12hour = String(time12hour) + ":" + String(timeinfo.tm_min) +" " + timeampm;
+
+    if (timein12hour == autoTime){
+      
+    }
+  
  }
 
  

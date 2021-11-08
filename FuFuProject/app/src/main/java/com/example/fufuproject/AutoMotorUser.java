@@ -55,6 +55,7 @@ public class AutoMotorUser extends AppCompatActivity {
                 list.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     AutoMotor autoMotor = dataSnapshot.getValue(AutoMotor.class);
+                    autoMotor.setKey(dataSnapshot.getKey());
                     list.add(autoMotor);
 
 
