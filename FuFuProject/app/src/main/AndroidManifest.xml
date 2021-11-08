@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FuFuProject">
         <activity
+            android:name=".AutoMotorUser"
+            android:exported="true" />
+        <activity
             android:name=".ViewHistoryUser"
             android:exported="true" />
         <activity

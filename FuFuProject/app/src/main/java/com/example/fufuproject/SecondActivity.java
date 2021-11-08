@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class SecondActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
-    private Button logout,historyuser;
+    private Button logout,historyuser,autouser;
     private TextView Distance;
     private ToggleButton Manualbtnuser;
 
@@ -43,6 +43,7 @@ public class SecondActivity extends AppCompatActivity {
         Distance = (TextView)findViewById(R.id.DistanceTVuser);
         Manualbtnuser = (ToggleButton)findViewById(R.id.manualBtnuser);
         historyuser = (Button) findViewById(R.id.btnHistoryuser);
+        autouser = (Button) findViewById(R.id.btnAuto);
 
 
 
@@ -80,6 +81,13 @@ public class SecondActivity extends AppCompatActivity {
                     motorRef.setValue(0);
                 }
 
+            }
+        });
+
+        autouser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SecondActivity.this, AutoMotorUser.class));
             }
         });
 
