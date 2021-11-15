@@ -2,8 +2,13 @@ package com.example.fufuproject;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -46,15 +51,33 @@ public class SecondActivity extends AppCompatActivity {
         autouser = (Button) findViewById(R.id.btnAuto);
 
 
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("My Notification","Notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
 
         DatabaseReference databaseReference;
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 valueDistanceUser = snapshot.child("ESP32/distance").getValue().toString();
                 Distance.setText(valueDistanceUser);
+                //notifcation
+                if(Integer.parseInt(Distance.getText().toString()) > 60){
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(SecondActivity.this,"My Notification");
+                    builder.setContentTitle("FuFu Pet Feeder");
+                    builder.setContentText("The food in FuFU pet feeder is almost empty.");
+                    builder.setSmallIcon(R.drawable.ic_delete);
+                    builder.setAutoCancel(true);
+
+                    NotificationManagerCompat managerCompat = NotificationManagerCompat.from(SecondActivity.this);
+                    managerCompat.notify(1,builder.build());
+                }
 
                 valueMotorUser = snapshot.child("ESP32/motor").getValue().toString();
                 if(valueMotorUser.equals("0"))
@@ -104,6 +127,10 @@ public class SecondActivity extends AppCompatActivity {
                 logout ();
             }
         });
+
+
+
+
     }
 
     private void logout(){

@@ -2,8 +2,13 @@ package com.example.fufuproject;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +31,7 @@ import java.util.Date;
 public class AdminHomepage extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
-    private Button logout,viewUser,history;
+    private Button logout,viewUser,history,autoadmin;
     private TextView Distance;
     private ToggleButton Manual;
 
@@ -48,10 +53,15 @@ public class AdminHomepage extends AppCompatActivity {
         Distance = (TextView)findViewById(R.id.DistanceTV);
         Manual = (ToggleButton)findViewById(R.id.manualBtn);
         history = (Button)findViewById(R.id.btnHistory);
+        autoadmin = (Button) findViewById(R.id.btnAutoAdmin);
 
 
 
-
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel = new NotificationChannel("My Notification","Notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
 
         dref = FirebaseDatabase.getInstance().getReference();
         dref.addValueEventListener(new ValueEventListener() {
@@ -59,6 +69,17 @@ public class AdminHomepage extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 valueDistance = snapshot.child("ESP32/distance").getValue().toString();
                 Distance.setText(valueDistance);
+                //notifcation
+                if(Integer.parseInt(Distance.getText().toString()) > 60){
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminHomepage.this,"My Notification");
+                    builder.setContentTitle("FuFu Pet Feeder");
+                    builder.setContentText("The food in FuFU pet feeder is almost empty.");
+                    builder.setSmallIcon(R.drawable.ic_delete);
+                    builder.setAutoCancel(true);
+
+                    NotificationManagerCompat managerCompat = NotificationManagerCompat.from(AdminHomepage.this);
+                    managerCompat.notify(1,builder.build());
+                }
 
                 valueMotor = snapshot.child("ESP32/motor").getValue().toString();
                 if(valueMotor.equals("0"))
@@ -109,6 +130,13 @@ public class AdminHomepage extends AppCompatActivity {
                 startActivity(new Intent(AdminHomepage.this, ViewHistory.class));
             }
         });
+        autoadmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AdminHomepage.this, AutoMotorUser.class));
+            }
+        });
+
     }
 
     private void logout(){
