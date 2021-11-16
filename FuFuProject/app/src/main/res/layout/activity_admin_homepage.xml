@@ -19,21 +19,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DistanceTV"
-        app:layout_constraintVertical_bias="0.543" />
+        app:layout_constraintVertical_bias="0.648" />
 
     <Button
         android:id="@+id/btnAutoAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/oval_button"
-        android:backgroundTint="#F2DA85"
+        android:backgroundTint="#F8E0BC"
         android:text="Set Auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
+        app:layout_constraintVertical_bias="0.704" />
 
     <TextView
         android:id="@+id/DistanceTV"
@@ -72,7 +71,7 @@
         app:layout_constraintHorizontal_bias="0.844"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
+        app:layout_constraintVertical_bias="0.603" />
 
     <Button
         android:id="@+id/btnHistory"
@@ -86,6 +85,6 @@
         app:layout_constraintHorizontal_bias="0.249"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
+        app:layout_constraintVertical_bias="0.603" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
