@@ -60,12 +60,12 @@ const int buttonPin = 27; // pin button
 int buttonState = 0;
 int buttonDeviceState = 0;
 
-Stepper myStepper = Stepper(stepsPerRevolution, 26, 33, 13, 32); //pin esp
+Stepper myStepper = Stepper(stepsPerRevolution, 26, 33, 12, 32); //pin esp
 
 //ultrasonic sensor
-//#define echoPin 18
+//#define echoPin 3
 //#define trigPin 19
-UltraSonicDistanceSensor distanceSensor(19, 18); //initialisation class HCSR04 (trig pin , echo pin)
+UltraSonicDistanceSensor distanceSensor(19,3); //initialisation class HCSR04 (trig pin , echo pin)
 
 long duration;
 int distance;
@@ -145,7 +145,7 @@ void setup() {
   // Print a message to the LCD.
   lcd.backlight();
   lcd.setCursor(0, 0);
-  lcd.print("Halu,dh jadi");
+  lcd.print("Hello,Welcome to FUFU");
   lcd.setCursor(0, 1);
   lcd.print("FuFu Pet Feeder");
 
