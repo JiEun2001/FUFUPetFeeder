@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/logo_centre_2"
+    android:background="@drawable/right_bg_with_logo"
     tools:context=".AutoMotorUser">
 
     <TextView
-        android:id="@+id/tvTimer1"
+        android:id="@+id/tvTimer3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -19,31 +19,42 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.358"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.393">
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer2"
+        app:layout_constraintVertical_bias="0.097">
 
     </TextView>
 
-    <TextView
-        android:id="@+id/tvTimer2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Select Time"
-        android:textColor="@color/white"
-        android:textColorHint="#FFFFFF"
-        android:textSize="32sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/deletetimer3"
+        android:layout_width="52dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_delete"
+        android:tintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTimer1"
-        app:layout_constraintVertical_bias="0.08">
+        app:layout_constraintTop_toBottomOf="@+id/deletetimer2"
+        app:layout_constraintVertical_bias="0.088">
 
-    </TextView>
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/deletetimer4"
+        android:layout_width="52dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_delete"
+        android:tintMode="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deletetimer3"
+        app:layout_constraintVertical_bias="0.09">
+
+    </ImageView>
 
     <TextView
         android:id="@+id/tvTimer5"
@@ -57,10 +68,59 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.358"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTimer4"
-        app:layout_constraintVertical_bias="0.156">
+        app:layout_constraintVertical_bias="0.143">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/deletetimer2"
+        android:layout_width="52dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_delete"
+        android:tintMode="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deletetimer1"
+        app:layout_constraintVertical_bias="0.074">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/deletetimer5"
+        android:layout_width="52dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_delete"
+        android:tintMode="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deletetimer4"
+        app:layout_constraintVertical_bias="0.134">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvTimer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Select Time"
+        android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369">
 
     </TextView>
 
@@ -76,15 +136,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.358"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTimer3"
-        app:layout_constraintVertical_bias="0.096">
+        app:layout_constraintVertical_bias="0.089">
 
     </TextView>
 
     <TextView
-        android:id="@+id/tvTimer3"
+        android:id="@+id/tvTimer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -95,10 +155,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.358"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTimer2"
-        app:layout_constraintVertical_bias="0.102">
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer1"
+        app:layout_constraintVertical_bias="0.076">
 
     </TextView>
 
@@ -110,70 +170,10 @@
         android:tintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.394">
-
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/deletetimer4"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
-        android:src="@drawable/ic_delete"
-        android:tintMode="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.715"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deletetimer3"
-        app:layout_constraintVertical_bias="0.096">
-
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/deletetimer5"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
-        android:src="@drawable/ic_delete"
-        android:tintMode="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.715"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deletetimer4"
-        app:layout_constraintVertical_bias="0.145">
-
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/deletetimer2"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
-        android:src="@drawable/ic_delete"
-        android:tintMode="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.715"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deletetimer1"
-        app:layout_constraintVertical_bias="0.077">
-
-    </ImageView>
-
-    <ImageView
-        android:id="@+id/deletetimer3"
-        android:layout_width="52dp"
-        android:layout_height="44dp"
-        android:src="@drawable/ic_delete"
-        android:tintMode="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.715"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deletetimer2"
-        app:layout_constraintVertical_bias="0.096">
+        app:layout_constraintVertical_bias="0.369">
 
     </ImageView>
 

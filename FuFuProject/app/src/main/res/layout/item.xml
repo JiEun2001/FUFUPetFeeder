@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
 
+    app:cardBackgroundColor="#DEA06A"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp">
 
@@ -91,9 +92,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
-
-
-
 
 
             <ImageView

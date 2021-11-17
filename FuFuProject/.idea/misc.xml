@@ -10,13 +10,13 @@
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/drawable/oval_button.xml" value="0.125" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/drawable/text_border.xml" value="0.1" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_about_us.xml" value="0.22" />
-        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_about_us_admin.xml" value="0.22" />
-        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_dina.xml" value="0.22" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_about_us_admin.xml" value="0.3333333333333333" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_dina.xml" value="0.3333333333333333" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_edit_user_profile.xml" value="0.16666666666666666" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_faiz.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_farhan.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_hasya.xml" value="0.22" />
-        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_homepage.xml" value="0.22" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_homepage.xml" value="0.25" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_jason.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_log_in.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_password.xml" value="0.22" />
@@ -25,7 +25,7 @@
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_reg.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_update_password.xml" value="0.1403985507246377" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_admin_update_profile.xml" value="0.22" />
-        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_auto_motor_user.xml" value="0.3333333333333333" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_auto_motor_user.xml" value="0.16666666666666666" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_password.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_profile.xml" value="0.22" />
@@ -39,7 +39,7 @@
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_view_list_user.xml" value="0.3333333333333333" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/activity_view_product_admin.xml" value="0.1796875" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/auto.xml" value="0.1796875" />
-        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/historyitem.xml" value="0.11367753623188406" />
+        <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/historyitem.xml" value="0.22" />
         <entry key="..\:/Master Fufu Github/FuFuProject/app/src/main/res/layout/item.xml" value="0.11367753623188406" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/drawable/custom_input.xml" value="0.2703125" />

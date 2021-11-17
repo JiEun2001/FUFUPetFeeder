@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="8dp"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="#DEA06A"
     app:cardCornerRadius="8dp"
-    android:layout_margin="16dp">
+    app:cardElevation="8dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -19,15 +20,15 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Time: "
-                    android:textColor="@color/black"
-                    android:textSize="26dp"
-                    android:textStyle="bold">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: "
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold">
 
-                </TextView>
+            </TextView>
 
             <TextView
                 android:id="@+id/tvTime"
@@ -42,11 +43,13 @@
 
 
         </LinearLayout>
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/DeleteTime"
                 android:layout_width="50dp"
