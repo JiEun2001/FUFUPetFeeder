@@ -48,7 +48,9 @@
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_about_us_admin.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_dina.xml" value="0.1390625" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_edit_user_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_faiz.xml" value="0.1390625" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_farhan.xml" value="0.25416666666666665" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_hasya.xml" value="0.1390625" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_homepage.xml" value="0.2" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_jason.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_admin_log_in.xml" value="0.264" />
@@ -64,7 +66,7 @@
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_second.xml" value="0.2" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_update_password.xml" value="0.14583333333333334" />
-        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_update_profile.xml" value="0.4" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_update_profile.xml" value="0.264" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_view_history.xml" value="0.19384057971014493" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_view_history_user.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/activity_view_list_user.xml" value="0.25416666666666665" />
@@ -74,6 +76,7 @@
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/item.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/layout/layout_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/menu/adminmenu.xml" value="0.25416666666666665" />
+        <entry key="..\:/MasterFuFuSD/FuFuProject/app/src/main/res/menu/historymenu.xml" value="0.264" />
         <entry key="..\:/Users/muhda/Desktop/Assignments/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/muhda/Desktop/Assignments/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_second.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/muhda/Desktop/Works/Assignments &amp; Projects/SD/Master FUFU GitHub/FuFuProject/app/src/main/res/layout/activity_about_us.xml" value="0.33" />

@@ -85,24 +85,26 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivfaiz"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="355dp" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="71dp"
         android:layout_height="23dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="128dp"
         android:text="Hasya"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivhasya"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.019" />
 
     <TextView
         android:id="@+id/textView12"
@@ -114,8 +116,8 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView13"
-        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivdina"
         app:layout_constraintVertical_bias="0.0" />
@@ -130,11 +132,11 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView10"
-        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivjason"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.004" />
 
     <ImageView
         android:id="@+id/ivdina"
@@ -154,15 +156,14 @@
         android:layout_width="96dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="52dp"
         android:text="Farhan"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivfarhan"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.004" />
 
     <ImageView
         android:id="@+id/ivjason"

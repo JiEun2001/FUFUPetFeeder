@@ -26,7 +26,7 @@ public class AboutUsAdmin extends AppCompatActivity {
                 startActivity(new Intent(AboutUsAdmin.this, AdminJason.class));
             }
         });
-        setContentView(R.layout.activity_about_us);
+        //setContentView(R.layout.activity_about_us);
         IvFarhan = (ImageView) findViewById(R.id.ivfarhan);
         IvFarhan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,8 +34,8 @@ public class AboutUsAdmin extends AppCompatActivity {
                 startActivity(new Intent(AboutUsAdmin.this, AdminFarhan.class));
             }
         });
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+
+        //setContentView(R.layout.activity_about_us);
         IvFaiz = (ImageView) findViewById(R.id.ivfaiz);
         IvFaiz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,8 +43,7 @@ public class AboutUsAdmin extends AppCompatActivity {
                 startActivity(new Intent(AboutUsAdmin.this, AdminFaiz.class));
             }
         });
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+        //setContentView(R.layout.activity_about_us);
         IvDina = (ImageView) findViewById(R.id.ivdina);
         IvDina.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +51,7 @@ public class AboutUsAdmin extends AppCompatActivity {
                 startActivity(new Intent(AboutUsAdmin.this, AdminDina.class));
             }
         });
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+        //setContentView(R.layout.activity_about_us);
         IvHasya = (ImageView) findViewById(R.id.ivhasya);
         IvHasya.setOnClickListener(new View.OnClickListener() {
             @Override

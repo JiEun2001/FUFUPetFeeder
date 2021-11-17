@@ -70,7 +70,7 @@ public class AdminHomepage extends AppCompatActivity {
                 valueDistance = snapshot.child("ESP32/distance").getValue().toString();
                 Distance.setText(valueDistance);
                 //notifcation
-                if(Integer.parseInt(Distance.getText().toString()) > 60){
+                if(Integer.parseInt(Distance.getText().toString()) > 20){
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminHomepage.this,"My Notification");
                     builder.setContentTitle("FuFu Pet Feeder");
                     builder.setContentText("The food in FuFU pet feeder is almost empty.");

@@ -51,31 +51,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageView
-        android:id="@+id/ivjason"
-        android:layout_width="103dp"
-        android:layout_height="105dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivfarhan"
-        app:layout_constraintHorizontal_bias="0.313"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.109"
-        app:srcCompat="@drawable/jason" />
-
-    <ImageView
-        android:id="@+id/ivfarhan"
-        android:layout_width="103dp"
-        android:layout_height="105dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.109"
-        app:srcCompat="@drawable/paan" />
-
-    <ImageView
         android:id="@+id/ivdina"
         android:layout_width="103dp"
         android:layout_height="105dp"
@@ -108,11 +83,37 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toEndOf="@+id/ivfarhan"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.109"
+        app:layout_constraintVertical_bias="0.028"
         app:srcCompat="@drawable/faiz" />
+
+    <ImageView
+        android:id="@+id/ivjason"
+        android:layout_width="103dp"
+        android:layout_height="105dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivfarhan"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/jason" />
+
+    <ImageView
+        android:id="@+id/ivfarhan"
+        android:layout_width="103dp"
+        android:layout_height="105dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="@drawable/paan" />
 
     <TextView
         android:id="@+id/textView9"

@@ -68,7 +68,7 @@ public class SecondActivity extends AppCompatActivity {
                 valueDistanceUser = snapshot.child("ESP32/distance").getValue().toString();
                 Distance.setText(valueDistanceUser);
                 //notifcation
-                if(Integer.parseInt(Distance.getText().toString()) > 60){
+                if(Integer.parseInt(Distance.getText().toString()) > 20){
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(SecondActivity.this,"My Notification");
                     builder.setContentTitle("FuFu Pet Feeder");
                     builder.setContentText("The food in FuFU pet feeder is almost empty.");

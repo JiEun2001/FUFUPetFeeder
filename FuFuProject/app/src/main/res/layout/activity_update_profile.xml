@@ -68,6 +68,7 @@
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textColorHint="#000000"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
