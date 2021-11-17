@@ -11,9 +11,10 @@
         android:id="@+id/tvTimer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
         android:gravity="center"
         android:hint="Select Time"
+        android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311">
+        app:layout_constraintVertical_bias="0.393">
 
     </TextView>
 
@@ -32,14 +33,15 @@
         android:gravity="center"
         android:hint="Select Time"
         android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396">
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer1"
+        app:layout_constraintVertical_bias="0.08">
 
     </TextView>
 
@@ -50,14 +52,15 @@
         android:gravity="center"
         android:hint="Select Time"
         android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627">
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer4"
+        app:layout_constraintVertical_bias="0.156">
 
     </TextView>
 
@@ -68,14 +71,15 @@
         android:gravity="center"
         android:hint="Select Time"
         android:textColor="@color/white"
+        android:textColorHint="#FBFBFB"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552">
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer3"
+        app:layout_constraintVertical_bias="0.096">
 
     </TextView>
 
@@ -86,14 +90,15 @@
         android:gravity="center"
         android:hint="Select Time"
         android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469">
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer2"
+        app:layout_constraintVertical_bias="0.102">
 
     </TextView>
 
@@ -105,10 +110,10 @@
         android:tintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.715"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311">
+        app:layout_constraintVertical_bias="0.394">
 
     </ImageView>
 
@@ -120,10 +125,10 @@
         android:tintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.715"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.553">
+        app:layout_constraintTop_toBottomOf="@+id/deletetimer3"
+        app:layout_constraintVertical_bias="0.096">
 
     </ImageView>
 
@@ -135,10 +140,10 @@
         android:tintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.715"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627">
+        app:layout_constraintTop_toBottomOf="@+id/deletetimer4"
+        app:layout_constraintVertical_bias="0.145">
 
     </ImageView>
 
@@ -150,10 +155,10 @@
         android:tintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.715"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395">
+        app:layout_constraintTop_toBottomOf="@+id/deletetimer1"
+        app:layout_constraintVertical_bias="0.077">
 
     </ImageView>
 
@@ -165,10 +170,10 @@
         android:tintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintHorizontal_bias="0.715"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47">
+        app:layout_constraintTop_toBottomOf="@+id/deletetimer2"
+        app:layout_constraintVertical_bias="0.096">
 
     </ImageView>
 
