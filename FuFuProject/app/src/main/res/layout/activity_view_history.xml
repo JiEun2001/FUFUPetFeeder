@@ -10,6 +10,7 @@
         android:id="@+id/rvViewHistory"
         android:layout_width="409dp"
         android:layout_height="729dp"
+        android:background="@drawable/whatsapp_image_2021_11_18_at_11_51_52_am"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
