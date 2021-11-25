@@ -69,7 +69,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
                             Toast.makeText(context,"delete" ,Toast.LENGTH_SHORT).show();
                         }else{
                             FirebaseStorage fStore = FirebaseStorage.getInstance();
-                            StorageReference sRef = fStore.getReference("users/").child(user.getKey()).child("Images/Profile Pic");
+                            StorageReference sRef = fStore.getReference("users/").child(user.getKey())
+                                    .child("Images/Profile Pic");
 
 
                             sRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {

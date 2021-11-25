@@ -9,8 +9,6 @@ public class Distance {
 
     public String historydistance;
 
-
-
     @Exclude
     public String key;
     public String date;

@@ -95,7 +95,8 @@ public class AdminUpdateProfile extends AppCompatActivity {
         });
 
         final StorageReference storageReference = firebaseStorage.getReference();
-        storageReference.child(firebaseAuth.getUid()).child("Images/Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageReference.child(firebaseAuth.getUid()).child("Images/Profile Pic").getDownloadUrl()
+                .addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).fit().centerCrop().into(updateProfilePic);
@@ -113,18 +114,21 @@ public class AdminUpdateProfile extends AppCompatActivity {
                 databaseReference.setValue(userProfile);
                 if (imagePath != null)
                 {
-                    StorageReference imageReference = storageReference.child("users").child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
+                    StorageReference imageReference = storageReference.child("users").child(firebaseAuth.getUid())
+                            .child("Images").child("Profile Pic");
                     UploadTask uploadTask = imageReference.putFile(imagePath);
 
                     uploadTask.addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(AdminUpdateProfile.this, "Upload Fail ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdminUpdateProfile.this, "Upload Fail ", Toast.LENGTH_SHORT)
+                                    .show();
                         }
                     }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            Toast.makeText(AdminUpdateProfile.this, "Upload Succesful ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdminUpdateProfile.this, "Upload Succesful ", Toast.LENGTH_SHORT)
+                                    .show();
                         }
                     });
                 }

@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, AdminHomepage.class));
                 //user
             }else{
-                firebaseDatabase.getReference("users/").child(firebaseAuth.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                firebaseDatabase.getReference("users/").child(firebaseAuth.getUid()).get()
+                        .addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DataSnapshot> task) {
                         if (!task.isSuccessful()) {
@@ -86,7 +87,8 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
-                                            Toast.makeText(MainActivity.this, "Account Deleted", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(MainActivity.this, "Account Deleted",
+                                                    Toast.LENGTH_SHORT).show();
 
                                         }
                                     }
@@ -110,7 +112,8 @@ public class MainActivity extends AppCompatActivity {
                 if (!Name.getText().toString().isEmpty() && !Password.getText().toString().isEmpty()) {
                     validate(Name.getText().toString(), Password.getText().toString());
                 }else{
-                    Toast.makeText(MainActivity.this, "Please insert Email and password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Please insert Email and password",
+                            Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -146,7 +149,8 @@ public class MainActivity extends AppCompatActivity {
 
             if(UserName.equals("farhanazmi012@gmail.com")){
                 //if login is admin
-                firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
@@ -169,15 +173,16 @@ public class MainActivity extends AppCompatActivity {
                 });
             }else{
                 //if login not admin
-                firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-
+                firebaseAuth.signInWithEmailAndPassword(UserName,UserPassword).addOnCompleteListener
+                        (new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             progressDialog.dismiss();
                             CheckEmailVerification();
                             //
-                            firebaseDatabase.getReference("users/").child(firebaseAuth.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                            firebaseDatabase.getReference("users/").child(firebaseAuth.getUid())
+                                    .get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
                                 @Override
                                 public void onComplete(@NonNull Task<DataSnapshot> task) {
                                     if (!task.isSuccessful()) {
@@ -187,11 +192,13 @@ public class MainActivity extends AppCompatActivity {
                                     else {
                                         if(task.getResult().getValue() == null)
                                         {
-                                            firebaseAuth.getCurrentUser().delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            firebaseAuth.getCurrentUser().delete().addOnCompleteListener
+                                                    (new OnCompleteListener<Void>() {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()) {
-                                                        Toast.makeText(MainActivity.this, "Account Deleted", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(MainActivity.this, "Account Deleted",
+                                                                Toast.LENGTH_SHORT).show();
 
 
                                                     }

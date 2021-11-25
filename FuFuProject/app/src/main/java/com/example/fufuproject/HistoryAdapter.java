@@ -65,7 +65,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
             distance = itemView.findViewById(R.id.tvDistance);
             date = itemView.findViewById(R.id.tvDate);
 
-
         }
     }
 }

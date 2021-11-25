@@ -30,7 +30,6 @@ public class AdminLogInActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private TextView forgotPassword;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +43,6 @@ public class AdminLogInActivity extends AppCompatActivity {
         Login = (Button) findViewById(R.id.ButtonLogin);
         userRegistration = (TextView) findViewById(R.id.tvRegister);
         forgotPassword = (TextView) findViewById(R.id.tvForgorPassword);
-
 
         Attempt.setText("No. of attempt remaining: 5");
 
@@ -71,7 +69,6 @@ public class AdminLogInActivity extends AppCompatActivity {
             }
         });
 
-
         userRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,8 +83,6 @@ public class AdminLogInActivity extends AppCompatActivity {
                 startActivity(new Intent(AdminLogInActivity.this , PasswordActivity.class));
             }
         });
-
-
     }
 
     private void validate(String UserName, String UserPassword) {
@@ -127,12 +122,7 @@ public class AdminLogInActivity extends AppCompatActivity {
                     firebaseAuth.signOut();
                 }
             }
-
         });
     }
-
-
-
-
 }
 

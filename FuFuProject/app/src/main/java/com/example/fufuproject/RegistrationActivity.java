@@ -95,7 +95,8 @@ public class RegistrationActivity extends AppCompatActivity {
                         String user_email = userEmail.getText().toString().trim();
                         String user_password = userPassword.getText().toString().trim();
 
-                        firebaseAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        firebaseAuth.createUserWithEmailAndPassword(user_email, user_password)
+                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
@@ -103,14 +104,16 @@ public class RegistrationActivity extends AppCompatActivity {
                                     sendEmailVerification();
 
                                 } else {
-                                    Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegistrationActivity.this, "Registration Failed",
+                                            Toast.LENGTH_SHORT).show();
 
                                 }
                             }
                         });
                     }
                 }else {
-                    Toast.makeText(RegistrationActivity.this, "Password must be 8 or above.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationActivity.this, "Password must be 8 or above.",
+                            Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -160,12 +163,14 @@ public class RegistrationActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
                         sendUserData();
-                        Toast.makeText(RegistrationActivity.this, "Succesfully registered, please check your email ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistrationActivity.this, "Succesfully registered, " +
+                                "please check your email ", Toast.LENGTH_SHORT).show();
                         firebaseAuth.signOut();
                         finish();
                         startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
                     }else{
-                        Toast.makeText(RegistrationActivity.this, "Email verification hasn't been sent", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistrationActivity.this, "Email verification hasn't been sent",
+                                Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -175,7 +180,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private void sendUserData(){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference("users/" + firebaseAuth.getUid());
-        StorageReference imageReference = storageReference.child("users").child(firebaseAuth.getUid()).child("Images").child("Profile Pic");
+        StorageReference imageReference = storageReference.child("users").child(firebaseAuth.getUid()).child("Images")
+                .child("Profile Pic");
         UploadTask uploadTask = imageReference.putFile(imagePath);
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override

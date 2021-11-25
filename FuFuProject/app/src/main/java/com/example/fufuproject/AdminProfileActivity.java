@@ -56,7 +56,8 @@ public class AdminProfileActivity extends AppCompatActivity {
         DatabaseReference databaseReference = firebaseDatabase.getReference("users/"+firebaseAuth.getUid());
 
         StorageReference storageReference = firebaseStorage.getReference();
-        storageReference.child("users").child(firebaseAuth.getUid()).child("Images/Profile Pic").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageReference.child("users").child(firebaseAuth.getUid()).child("Images/Profile Pic")
+                .getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).fit().centerCrop().into(profilePic);

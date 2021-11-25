@@ -58,7 +58,8 @@ public class AdminHomepage extends AppCompatActivity {
 
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            NotificationChannel channel = new NotificationChannel("My Notification","Notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel("My Notification",
+                    "Notification", NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
@@ -71,7 +72,8 @@ public class AdminHomepage extends AppCompatActivity {
                 Distance.setText(valueDistance);
                 //notifcation
                 if(Integer.parseInt(Distance.getText().toString()) > 20){
-                    NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminHomepage.this,"My Notification");
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(
+                            AdminHomepage.this,"My Notification");
                     builder.setContentTitle("FuFu Pet Feeder");
                     builder.setContentText("The food in FuFU pet feeder is almost empty.");
                     builder.setSmallIcon(R.drawable.ic_delete);

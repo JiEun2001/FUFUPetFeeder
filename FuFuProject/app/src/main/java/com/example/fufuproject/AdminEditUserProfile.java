@@ -52,13 +52,6 @@ public class AdminEditUserProfile extends AppCompatActivity {
                     AdminUserAge.setText(userProfile.getUserAge());
                     AdminUserEmail.setText(userProfile.getUserEmail());
                 }
-
-
-
-
-
-
-
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {

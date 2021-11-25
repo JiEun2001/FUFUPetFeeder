@@ -58,13 +58,11 @@ public class AutoAdapter extends RecyclerView.Adapter<AutoAdapter.MyViewHolder> 
                             Toast.makeText(context,"delete" ,Toast.LENGTH_SHORT).show();
                         }else {
 
-
                         }
                     }
                 });
             }
         });
-
     }
 
     @Override

@@ -10,7 +10,6 @@ public class AutoMotor {
     public String key;
     public String date;
 ////////////////////
-
     public String getKey() {
         return key;
     }
